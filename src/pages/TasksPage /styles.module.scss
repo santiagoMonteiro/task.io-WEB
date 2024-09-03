@@ -18,16 +18,16 @@
 }
 
 .headerContainer {
+  display: flex;
+  // flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   padding: 1.5rem 2rem;
   background-color: var(--gray-400);
   span {
     color: var(--gray-600);
     margin: 0 0.1rem;
   }
-  display: flex;
-  // flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 
   div {
     display: flex;
