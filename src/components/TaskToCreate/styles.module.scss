@@ -49,6 +49,15 @@
     border-radius: 2px;
     padding: 0.5rem 0;
   }
+
+  select {
+    // outline: none;
+    // margin-left: 0.5rem;
+    background-color: var(--gray-200);
+    // border: none;
+    // border-radius: 2px;
+    // font-size: 0.85rem;
+  }
 }
 .deliveryDateContainer {
   display: flex;

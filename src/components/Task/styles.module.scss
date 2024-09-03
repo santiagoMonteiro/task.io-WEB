@@ -26,12 +26,12 @@
   }
 
   select {
-    outline: none;
-    margin-left: 0.5rem;
+    // outline: none;
+    // margin-left: 0.5rem;
     background-color: var(--gray-200);
-    border: none;
-    border-radius: 2px;
-    font-size: 0.85rem;
+    // border: none;
+    // border-radius: 2px;
+    // font-size: 0.85rem;
   }
 
   textarea {
@@ -44,5 +44,27 @@
     border-radius: 4px;
     padding: 0.5rem;
     color: var(--gray-100);
+  }
+}
+
+.outsideContainer {
+  position: relative;
+}
+.operationsContainer {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: var(--gray-200);
+    font-size: 1.2rem;
+
+    &:last-child {
+      margin-left: 0.5rem;
+    }
   }
 }

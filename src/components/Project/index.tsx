@@ -7,6 +7,7 @@ import {
   deleteProjectApiRoute,
   updateProjectApiRoute,
 } from '../../services/api'
+import { useNavigate } from 'react-router-dom'
 
 interface ProjectProps {
   id: string
@@ -33,6 +34,8 @@ export function Project({
 
   const [isEditing, setIsEditing] = useState(false)
   const [changed, setChanged] = useState(false)
+
+  const navigate = useNavigate()
 
   return (
     <div className={styles.outsideContainer}>
@@ -74,7 +77,13 @@ export function Project({
           onChange={(e) => setEditableDescription(e.target.value)}
           readOnly={!isEditing}
         ></textarea>
-        <button>Acessar tarefas</button>
+        <button
+          onClick={() => {
+            navigate(`/tasks/${id}`)
+          }}
+        >
+          Acessar tarefas
+        </button>
       </form>
       <div className={styles.operationsContainer}>
         {isEditing ? (
