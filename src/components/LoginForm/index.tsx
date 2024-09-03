@@ -1,12 +1,29 @@
 import { useState } from 'react'
 import styles from './styles.module.scss'
+import { login } from '../../services/api'
 
 export function LoginForm() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
+  function handleSubmit(
+    event: React.FormEvent<HTMLFormElement>,
+    email: string,
+    password: string
+  ) {
+    event.preventDefault()
+    login({
+      email,
+      password,
+    })
+  }
+
   return (
-    <form action='' className={styles.container}>
+    <form
+      action=''
+      className={styles.container}
+      onSubmit={(e) => handleSubmit(e, email, password)}
+    >
       <h2>Login:</h2>
       <input
         type='email'
@@ -24,7 +41,7 @@ export function LoginForm() {
         onChange={(e) => setPassword(e.target.value)}
       ></input>
 
-      <button>Fazer login</button>
+      <button type='submit'>Fazer login</button>
     </form>
   )
 }

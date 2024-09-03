@@ -1,9 +1,4 @@
 .container {
-
-  h2 {
-    margin-bottom: 0.75rem;
-  }
-  
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -11,6 +6,10 @@
   padding: 1rem;
   border-radius: 4px;
   max-width: 20rem;
+
+  h2 {
+    margin-bottom: 0.75rem;
+  }
 
   input {
     width: 100%;
